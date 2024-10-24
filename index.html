@@ -20,6 +20,8 @@
             }
         .card {
             background-image: url("marco1.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             padding: 60px 20px;
@@ -95,34 +97,34 @@
     }
 
     .card {
-        padding: 30px 10px; /* Menos padding en dispositivos móviles */
-        width: 100%; /* Ancho completo para móviles */
-        height: 75%; /* Permitir que la altura se ajuste automáticamente */
+        padding: 20px 10px; /* Menos padding en dispositivos móviles */
+        width: 75%; /* Ancho completo para móviles */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
         max-width: none; /* Remover el límite máximo de ancho */
         max-height: none; /* Remover el límite máximo de altura */
     }
 
     h1 {
-        font-size: 60px; /* Reducir el tamaño del título en móviles */
+        font-size: 30px; /* Reducir el tamaño del título en móviles */
     }
 
     h2 {
-        font-size: 22px; /* Ajustar tamaño del subtítulo */
+        font-size: 15px; /* Ajustar tamaño del subtítulo */
     }
 
     p {
-        font-size: 16px; /* Reducir ligeramente el tamaño del texto */
+        font-size: 10px; /* Reducir ligeramente el tamaño del texto */
     }
 
     .button-container {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-        width: 100%; /* Ancho completo para móviles */
+        width: 70%; /* Ancho completo para móviles */
     }
 
     .button {
         width: 100%; /* Ajustar el ancho de los botones en móviles */
-        padding: 10px 0; /* Incrementar padding para más facilidad de clic en móviles */
-        font-size: 16px; /* Ajustar el tamaño de fuente del botón en móviles */
+        padding: 6px 0; /* Incrementar padding para más facilidad de clic en móviles */
+        font-size: 8px; /* Ajustar el tamaño de fuente del botón en móviles */
     }
 }
  
