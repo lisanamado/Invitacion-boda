@@ -69,14 +69,15 @@
 
         .button-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin: 10px auto;
             width: 55%;
+            justify-content: center;
+            align-items: center;
 
          }
         
-        .button {
+        .button, .copy-button {
             width: 90%;
             padding: 6px 0;
             border-radius: 5px;
@@ -87,6 +88,13 @@
             font-size: 18px;
             font-weight: 400;
             text-align: center;
+
+        .text {
+            font-family: "Playwrite GB S", cursive;
+            font-size: 20px;
+            color: #042151;
+            text-align: center;
+            margin: 10px 0;
         
         }
                 /* Ajustes específicos para pantallas pequeñas */
@@ -129,7 +137,7 @@
         width: 75%; 
     }
 
-    .button {
+    .button, .copy-button {
         width: 100%; 
         padding: 6px 0; 
         font-size: 14px;
@@ -137,27 +145,30 @@
 
     }
 }
- 
-}
 
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>Ivana y Pablo</h1>
-        <h2>Te invitamos a nuestra boda</h2>
-        <p><strong>Fecha:</strong> 23 de Noviembre</p>
-        <p><strong>Hora:</strong> 20:00hs</p>
-        <p><strong>Lugar:</strong> Sal&oacuten Luna Mora </p>
-        
-        <div class="button-container">
-    
-        <a href="https://maps.app.goo.gl/8FHH9yGChxL35fT5A" target="_blank"  class="button">Ubicaci&oacuten en Maps</a>
-        <a href="regalo.html" target="_blank" class="button">REGALOS</a>
-        <a href="https://forms.gle/GMeF1vzZxKNd3xsY9" target="_blank"  class="button">Propon&eacute m&uacutesica</a>
-        <a href="https://wa.me/5492223574350?text=Gracias%20por%20invitar!%20(indicar%20nombre%20y%20apellido)" target="_blank"  class="button">ASISTIR&Eacute!</a>
-    
-        </div>
+        <h1>Nuestro mejor regalo es contar con tu presencia en esta fecha tan importante para nosotros. Pero si pensabas en hacernos llegar un presente, pod&eacutes ayudarnos a tener una hermosa luna de miel.</h1>
+
+        <div class="text"><strong>CBU:</strong> 0140184003520152859503</div>
+        <button class="copy-button" onclick="copyToClipboard('0140184003520152859503')">Copiar CBU</button>
+
+        <div class="text"><strong>Alias:</strong> iplunademiel</div>
+        <button class="copy-button" onclick="copyToClipboard('iplunademiel')">Copiar Alias</button>
+
+        <a href="index.html" class="button">Volver Atrás</a>
     </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Texto copiado al portapapeles: " + text);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
